@@ -1,0 +1,16 @@
+training:
+  max_timesteps : 100000     # Max number of iterations for training
+  batch_size: 250            # Batch size for training
+  update_timestep : 2000     # Update policy every n time steps
+  num_epochs : 4             # Number of epochs of gradient updates
+  gamma : 0.99               # Discount factor gamma
+  lambda : 0.95              # Parameter for gae computation
+  epsilon_clip : 0.2         # Parameter to clip the PPO ratio
+  early_stopping : 195.0     # Empirical criterion to early stop training
+  log_interval : 20
+
+optimizer:
+  learning_rate: 0.001
+
+model:
+  hidden_size : 128          # Hidden layer number of units

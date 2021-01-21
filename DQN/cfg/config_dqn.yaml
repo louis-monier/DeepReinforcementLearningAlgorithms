@@ -1,0 +1,20 @@
+training:
+  batch_size: 1000           # Batch size for training
+  max_timesteps : 20000      # Max time training steps
+  replay_size : 1000         # Replay buffer size
+  start_epsilon : 0.4        # Proba of selecting random action during batch generation
+  final_epsilon : 0.1        # Min proba of selecting random action (towards the end of training)
+  decay_epsilon : 7500       # Epsilon decay parameter (2*replay_size / (start_eps - final_eps))
+  start_temperature : 10           # Start temperature parameter for Boltzmann exploration
+  final_temperature : 1
+  decay_temperature : 200
+  gamma : 0.99               # Discount factor gamma
+  early_stopping : 400.0     # Empirical criterion to early stop training
+  update_frequency : 5       # Timestep frequency of gradient descent updates
+  eval_frequency : 2500      # Timestep frequency of policy evaluation
+
+optimizer:
+  learning_rate: 0.001
+
+model:
+  hidden_size : 128          # Hidden layer number of units

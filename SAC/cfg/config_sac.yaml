@@ -1,0 +1,14 @@
+training:
+  max_timesteps : 30000        # Max time steps for the whole training process
+  batch_size: 32               # Batch size for training
+  replay_size : 5000           # Number of transitions stored in the replay buffer
+  gamma : 0.99                 # Discount factor gamma for reward
+  tau : 0.005                  # Target smoothing coefficient
+  alpha : 0.2                  # Entropy regularization coefficient
+  start_step : 1000            # Number of steps sampling random actions
+
+optimizer:
+  learning_rate: 3e-4
+
+model:
+  hidden_size : 128            # Hidden layer number of units
